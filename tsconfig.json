@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "strict": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ],
+    }
+  },
+  "include": ["src/**/*.ts", "e2e/**/*.ts"],
+  "exclude": ["node_modules", ".vscode"]
+}

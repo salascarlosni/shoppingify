@@ -1,0 +1,51 @@
+### Run using https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+### Get all available items
+GET http://localhost:8000/items/ HTTP/1.1
+
+### Create a new item
+POST http://localhost:8000/items/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Fruits and vegetables",
+    "category": "Orange"
+}
+
+### Get all shopping lists from a user
+GET http://localhost:8000/list HTTP/1.1
+
+### Create a new shopping list
+POST http://localhost:8000/list HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "My List 2",
+    "items": [
+        {
+            "itemId": 6,
+            "count": 2
+        }
+    ]
+}
+
+### Get detail of an existing shopping list
+GET http://localhost:8000/list/4
+
+### Update an existing shopping list
+PUT http://localhost:8000/list/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "My List edited",
+    "items": [
+        {
+            "itemId": 6,
+            "count": 1,
+            "checked": true
+        }
+    ]
+}
+
+### Delete an existing shopping list
+DELETE http://localhost:8000/list/6 HTTP/1.1
